@@ -45,7 +45,7 @@ class Home extends Component
         if ($this->pumpAuto) return;
 
         $this->pump = !$this->pump;
-        MQTT::publish('asm_iot_quanh', $this->pump ? 'bump_on' : 'bump_off');
+        MQTT::publish('asm_iot_quanh', $this->pump ? 'pump_on' : 'pump_off');
     }
 
     public function setPumpAuto()
@@ -53,10 +53,10 @@ class Home extends Component
         $this->pumpAuto = !$this->pumpAuto;
 
         if ($this->pumpAuto) {
-            MQTT::publish('asm_iot_quanh', 'bump_auto');
+            MQTT::publish('asm_iot_quanh', 'pump_auto');
         } else {
             $this->pump = false;
-            MQTT::publish('asm_iot_quanh', 'bump_off');
+            MQTT::publish('asm_iot_quanh', 'pump_off');
         }
     }
 
