@@ -17,6 +17,6 @@ class SensorDataController extends Controller
 
         SensorData::create($validated);
 
-        return response()->json(['message' => 'Dữ liệu đã được lưu']);
+        return response()->json(['message' => 'Save data success!']);
     }
 }

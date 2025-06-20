@@ -129,7 +129,6 @@
             retain: false
         },
     };
-
     const client = mqtt.connect(host, options);
 
     client.on('connect', () => {

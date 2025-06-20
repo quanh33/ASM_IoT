@@ -12,7 +12,6 @@ class Home extends Component
 
     public function toggleLed()
     {
-
         if ($this->ledAuto) return;
 
         $this->led = !$this->led;
@@ -21,7 +20,6 @@ class Home extends Component
 
     public function setLedAuto()
     {
-
         $this->ledAuto = !$this->ledAuto;
 
         if ($this->ledAuto) {
@@ -32,10 +30,6 @@ class Home extends Component
         }
     }
 
-    public function led_auto()
-    {
-        MQTT::publish('asm_iot_quanh', 'auto');
-    }
 
     public bool $pump = false;
     public bool $pumpAuto = true;
