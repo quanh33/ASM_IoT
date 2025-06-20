@@ -207,7 +207,7 @@
             tempData.push(temp);
             humiData.push(humi);
 
-            if (labels.length > 30) {
+            if (labels.length > 20) {
                 labels.shift();
                 tempData.shift();
                 humiData.shift();
